@@ -3,8 +3,159 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+
+  <link rel="stylesheet" href="common_styles.css">
+  <link rel="article" href="articles.html">
+
 </head>
 <body>
+
+
+<header class="header_container">
+  <h1 class="header box">Post-Impressionists</h1>
+</header>
+
+<nav class="nav nav_box">
+  <a href='HOME.html'>home</a>
+  <a href='CONTACT.html'>contact</a>
+  <a href='GALERY.html'>galery</a>
+</nav>
+
+<!--if I click on an image, information about it pops up-->
+
+<div class="pictures_flexbox">
+<img class="box_img art_box" id="image1" onclick="display_info('vangogh1','image1')" src="images/vangogh1.png" width="20%" height="20%">
+  <article id="vangogh1" style="display: none">
+    <h1 class="article_header box sunflowers" align="center">"Olive Trees with Yellow Sky<br>and Sun"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+  </article>
+
+<img class="box_img art_box" id="image2" onclick="display_info('vangogh2','image2')" src="images/van_gogh2.png" width="20%" height="20%">
+  <article id="vangogh2" style="display: none">
+
+    <h1 class="article_header box sunflowers" align="center">"fbgfgbbg<br>fbdfbgdb"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+
+  </article>
+<img class="box_img art_box" id="image3" onclick="display_info('vangogh4','image3')" src="images/van_gogh4.jpg" width="20%" height="20%">
+  <article id="vangogh4" style="display: none">
+
+    <h1 class="article_header box sunflowers" align="center">"Olive Trees with Yellow Sky<br>and Sun"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+
+  </article>
+<img class="box_img art_box" id="image4" onclick="display_info('vangogh5','image4')" src="images/van_gogh5.jpg" width="20%" height="20%">
+  <article id="vangogh5" style="display: none">
+
+    <h1 class="article_header box sunflowers" align="center">"Olive Trees with Yellow Sky<br>and Sun"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+
+
+  </article>
+
+<img class="box_img art_box" id="image5" onclick="display_info('seraut','image5')" src="images/cezanne2.jpg" width="20%" height="20%">
+  <article id="seraut" style="display: none">
+
+    <h1 class="article_header box sunflowers" align="center">"Olive Trees with Yellow Sky<br>and Sun"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+
+
+  </article>
+
+<img class="box_img art_box" id="image6" onclick="display_info('cezanne1','image6')" src="images/cezanne3.jpg" width="20%" height="20%">
+  <article id="cezanne1" style="display: none">
+
+    <h1 class="article_header box sunflowers" align="center">"Olive Trees with Yellow Sky<br>and Sun"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+
+  </article>
+
+<img class="box_img art_box" id="image7" onclick="display_info('cezanne2','image7')" src="images/cezanne1.png" width="20%" height="20%">
+  <article id="cezanne2" style="display: none">
+
+
+    <h1 class="article_header box sunflowers" align="center">"Olive Trees with Yellow Sky<br>and Sun"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+
+  </article>
+
+<img class="box_img art_box" id="image8" onclick="display_info('cezanne3','image8')" src="images/seraut1.jpg" width="20%" height="20%">
+  <article id="cezanne3" style="display: none">
+
+    <h1 class="article_header box sunflowers" align="center">"Olive Trees with Yellow Sky<br>and Sun"</h1>
+    <p class="paragraph_text" style="text-align: center" >A painting done by Vincent Van Gogh in 1889 in the Saint-Remy-de-Provence<br>
+      in France. Van Gogh immaculately captured the sense of motion through his heavy and dynamic<br>
+      brush strokes.
+    </p>
+
+  </article>
+
+  <video id="video1" class="box art_box" src="videos/starnight_vid.mp4" controls="controls">The starry night visually</video>
+</div>
+
+
+
+<footer class="footer_container">
+  <div class><p class= 'header box'>Julia Demitraszek</p></div>
+</footer>
+
+
+
+<script>
+
+
+  let x = ['image1','image2','image3','image4','image5','image6','image7','image8','video1'];
+  function display_info(id,img_id)
+  {
+    /* Access image by id and change
+    the display property to block*/
+    const article = document.getElementById(id);
+    if (article.style.display === 'block')
+    {
+      article.style.display = 'none';
+
+      for (let i = 0; i < x.length; i++ )
+      {
+          document.getElementById(x[i]).style.display = 'block';
+      }
+
+    } else
+    {
+      article.style.display = 'block';
+      for (let i = 0; i < x.length; i++ )
+      {
+        if (x[i] != img_id)
+        {
+          document.getElementById(x[i]).style.display = 'none';
+        }
+      }
+    }
+
+  }
+
+
+</script>
 
 </body>
 </html>

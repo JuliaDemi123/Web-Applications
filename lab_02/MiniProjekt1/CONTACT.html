@@ -1,10 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+
+  <link rel="stylesheet" href="common_styles.css">
 </head>
+
+
 <body>
+
+
+<header class="header_container">
+  <h1 class="header box">Post-Impressionists</h1>
+</header>
+
+<nav class="nav nav_box">
+  <a href='HOME.html'>home</a>
+  <a href='CONTACT.html'>contact</a>
+  <a href='GALERY.html'>galery</a>
+</nav>
+
+<br>
+<div class="background_for_contact">
+</div>
+
+<form id="formid">
+  <label for="mail" class="cute_text">e-mail</label>
+  <input class="txta" type="text" id="mail" name="mail" title="" placeholder="jankowalski1987@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"> <br>
+  <label class="cute_text" for="text_area">Select message topic</label>
+  <select class="btn" id="text_area" name="text_area">
+    <option value="reach_out">Reach out</option>
+    <option value="give_feedback">Feedback</option>
+    <option value="job_offer">Job Offer</option>
+  </select><br>
+  <textarea class="txta" id="txt" rows="4" cols="50" placeholder="Write your message here..."></textarea>
+  <br>
+  <button id="submit_button" class="btn" type="submit">Submit</button>
+</form>
+
+<footer class="footer_container">
+  <div class><p class= 'header box'>Julia Demitraszek</p></div>
+</footer>
+
+<script>
+  const email = document.getElementById('mail')
+  const text = document.getElementById('txt')
+  const sbmt_bnt = document.getElementById('submit_button')
+  const button_class = document.getElementsByClassName('btn')
+  const f = document.getElementById('formid')
+  const patternEmail = /^\S+@\S+\.\S+$/
+  const patternText = /.+/
+
+  for (let i = 0; i < button_class.length; i++)
+  {
+    button_class[i].addEventListener('mouseenter', () => {
+      button_class[i].style.backgroundColor = "#d0d7dc";
+    })
+
+    button_class[i].addEventListener('mouseout', () => {
+      button_class[i].style.backgroundColor = "#FBF8EF";
+    })
+  }
+  f.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let v = 0
+    if(!(patternEmail.test(email.value)) )
+    {
+      window.alert('ZLY MAILLLL!!1')
+      email.classList.add("error")
+      v+=1
+    }
+    else
+    {
+      if(email.classList.contains("error"))
+      {
+        email.classList.remove("error")
+      }
+    }
+    if(!(patternText.test(text.value)))
+    {
+      window.alert('ZLYTETXTTX!!1')
+      text.classList.add("error")
+      v+=1
+    }
+    else
+    {
+      if(text.classList.contains("error"))
+      {
+        text.classList.remove("error")
+      }
+    }
+
+    if(v == 0)
+    {
+      window.alert('message sent:)')
+    }
+
+  })
+
+
+</script>
+
+
 
 </body>
 </html>
